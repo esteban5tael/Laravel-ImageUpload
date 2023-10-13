@@ -1,0 +1,23 @@
+composer create-project laravel/laravel ImageUpload
+
+composer require jeroennoten/laravel-adminlte && php artisan adminlte:install
+
+composer require ibex/crud-generator --dev && php artisan vendor:publish --tag=crud
+
+composer require laravelcollective/html
+
+php artisan storage:link
+
+CONFIGURACIONES
+    .env
+        base de datos
+
+    app.config
+        timezone
+
+php artisan make:migration create_images_table
+
+php artisan migrate
+
+php artisan make:crud images
+
